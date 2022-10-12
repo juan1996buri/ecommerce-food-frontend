@@ -1,16 +1,12 @@
 import React from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import PizzaList from "../components/PizzaList";
-import SwiperFood from "../components/SwiperFood";
+import FoodList from "../components/FoodList";
+import SliderProduct from "../components/SliderProduct";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <SwiperFood />
-      <PizzaList />
-      <Footer />
+      <SliderProduct />
+      <FoodList />
     </>
   );
 };

@@ -1,11 +1,15 @@
+import { CardTravel, ShoppingCart } from "@mui/icons-material";
+import { Badge, IconButton } from "@mui/material";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../imgs/logo.png";
 import telephone from "../imgs/telephone.png";
 
 const Navbar = () => {
+  const { cantidadCart } = useSelector((item) => item.cart);
   return (
-    <div className="h-20 fixed" style={{ zIndex: "100" }}>
+    <div className="h-20 fixed " style={{ zIndex: "100" }}>
       <div className=" h-full flex justify-between bg-red-600 items-center px-7 text-yellow-50 w-screen relative ">
         <div className="flex items-center gap-3 ">
           <Link to={"/"}>
@@ -34,7 +38,14 @@ const Navbar = () => {
         </div>
         <div>
           <NavLink to={"/cart"}>
-            <button>Carrito</button>
+            <IconButton>
+              <Badge
+                badgeContent={cantidadCart}
+                color="secondary"
+                className="p-1">
+                <ShoppingCart className="text-white " />
+              </Badge>
+            </IconButton>
           </NavLink>
         </div>
       </div>

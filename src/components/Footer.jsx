@@ -3,7 +3,7 @@ import bg from "../imgs/bg.png";
 
 const Footer = () => {
   return (
-    <div className="pt-20 h-screen overflow-hidden ">
+    <div className="pt-20 h-screen overflow-hidden">
       <div className="bg-zinc-700 text-white h-screen grid grid-cols-4 p-4 gap-3">
         <div>
           <img src={bg} className={"h-screen object-cover"} />
